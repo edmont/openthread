@@ -260,12 +260,17 @@
  * Define as 1 to support IEEE 802.15.4-2015 Header IE (Information Element) generation and parsing, it must be set
  * to support following features:
  *    1. Time synchronization service feature (i.e., OPENTHREAD_CONFIG_TIME_SYNC_ENABLE is set).
+ *    2. Thread 1.2.
  *
- * @note If it's enabled, plaforms must support interrupt context and concurrent access AES.
+ * @note If it's enabled, platform must support interrupt context and concurrent access AES.
  *
  */
-#if OPENTHREAD_CONFIG_TIME_SYNC_ENABLE
+#ifndef OPENTHREAD_CONFIG_MAC_HEADER_IE_SUPPORT
+#if OPENTHREAD_CONFIG_TIME_SYNC_ENABLE || (OPENTHREAD_CONFIG_THREAD_VERSION >= OT_THREAD_VERSION_1_2)
 #define OPENTHREAD_CONFIG_MAC_HEADER_IE_SUPPORT 1
+#else
+#define OPENTHREAD_CONFIG_MAC_HEADER_IE_SUPPORT 0
+#endif
 #endif
 
 /**

@@ -1263,7 +1263,7 @@ void nrf_802154_tx_started(const uint8_t *aFrame)
 exit:
     return;
 }
-#endif
+#endif // OPENTHREAD_CONFIG_MAC_HEADER_IE_SUPPORT
 
 void nrf_802154_random_init(void)
 {

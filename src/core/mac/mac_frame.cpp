@@ -894,7 +894,6 @@ exit:
     return index;
 }
 
-#if OPENTHREAD_CONFIG_MAC_HEADER_IE_SUPPORT
 template <typename IeType> Error Frame::AppendHeaderIeAt(uint8_t &aIndex)
 {
     Error error = kErrorNone;
@@ -945,7 +944,6 @@ template <> void Frame::InitIeContentAt<Termination2Ie>(uint8_t &aIndex)
 {
     OT_UNUSED_VARIABLE(aIndex);
 }
-#endif // OPENTHREAD_CONFIG_MAC_HEADER_IE_SUPPORT
 
 const uint8_t *Frame::GetHeaderIe(uint8_t aIeId) const
 {
