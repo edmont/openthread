@@ -1460,14 +1460,14 @@ void Mac::HandleTransmitDone(TxFrame &aFrame, RxFrame *aAckFrame, Error aError)
             mBroadcastTransmitCount = 0;
         }
 
-#if OPENTHREAD_CONFIG_THREAD_VERSION >= OT_THREAD_VERSION_1_2
-        // Verify Enh-ACK integrity by checking its MIC
-        if ((aError == kErrorNone) && (aAckFrame != nullptr) &&
-            (ProcessEnhAckSecurity(aFrame, *aAckFrame) != kErrorNone))
-        {
-            aError = kErrorNoAck;
-        }
-#endif
+// #if OPENTHREAD_CONFIG_THREAD_VERSION >= OT_THREAD_VERSION_1_2
+//         // Verify Enh-ACK integrity by checking its MIC
+//         if ((aError == kErrorNone) && (aAckFrame != nullptr) &&
+//             (ProcessEnhAckSecurity(aFrame, *aAckFrame) != kErrorNone))
+//         {
+//             aError = kErrorNoAck;
+//         }
+// #endif
     }
 #endif // #if OPENTHREAD_CONFIG_RADIO_LINK_IEEE_802_15_4_ENABLE
 

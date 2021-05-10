@@ -296,7 +296,7 @@ static void txAckProcessSecurity(uint8_t *aAckFrame)
     otMacFrameSetKeyId(&ackFrame, keyId);
     otMacFrameSetFrameCounter(&ackFrame, sMacFrameCounter++);
 
-    otMacFrameProcessTransmitAesCcm(&ackFrame, &sExtAddress);
+    //otMacFrameProcessTransmitAesCcm(&ackFrame, &sExtAddress);
 
 exit:
     return;
