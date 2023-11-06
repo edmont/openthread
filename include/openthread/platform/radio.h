@@ -1145,6 +1145,8 @@ void otPlatRadioUpdateCslSampleTime(otInstance *aInstance, uint32_t aCslSampleTi
  */
 uint8_t otPlatRadioGetCslAccuracy(otInstance *aInstance);
 
+void otPlatRadioSetCslAccuracy(otInstance *aInstance, uint8_t aAccuracy);
+
 /**
  * The fixed uncertainty (i.e. random jitter) of the arrival time of CSL
  * transmissions received by this device in units of 10 microseconds.
@@ -1163,6 +1165,8 @@ uint8_t otPlatRadioGetCslAccuracy(otInstance *aInstance);
  *
  */
 uint8_t otPlatRadioGetCslUncertainty(otInstance *aInstance);
+
+void otPlatRadioSetCslUncertainty(otInstance *aInstance, uint8_t aUncertainty);
 
 /**
  * Set the max transmit power for a specific channel.
