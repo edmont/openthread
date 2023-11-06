@@ -2446,6 +2446,14 @@ template <> otError Interpreter::Process<Cmd("csl")>(Arg aArgs[])
     {
         error = ProcessSet(aArgs + 1, otLinkSetCslTimeout);
     }
+    else if (aArgs[0] == "accuracy")
+    {
+        error = ProcessSet(aArgs + 1, otPlatRadioSetCslAccuracy);
+    }
+    else if (aArgs[0] == "uncertainty")
+    {
+        error = ProcessSet(aArgs + 1, otPlatRadioSetCslUncertainty);
+    }
     else
     {
         error = OT_ERROR_INVALID_ARGS;

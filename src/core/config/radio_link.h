@@ -63,7 +63,7 @@
  *
  */
 #ifndef OPENTHREAD_CONFIG_RADIO_STATS_ENABLE
-#define OPENTHREAD_CONFIG_RADIO_STATS_ENABLE 0
+#define OPENTHREAD_CONFIG_RADIO_STATS_ENABLE 1
 #endif
 
 //--------------------------------------------------------------
